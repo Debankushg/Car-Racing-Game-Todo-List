@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.footer{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.781);
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+}

@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Arpita",
+      "email": "Ar@gmail.com",
+      "phone": "7785576955",
+      "address": "burnpur",
+      "services": "chop"
+    },
+    {
+      "id": 3,
+      "name": "Dumpy",
+      "email": "deba@gmail.com",
+      "phone": "7797656995",
+      "address": "Burnpur",
+      "services": "Ice Cream"
+    },
+    {
+      "id": 4,
+      "name": "Rohan",
+      "email": "R@gmail.com",
+      "phone": "8897656885",
+      "address": "Asansol",
+      "services": "Chicken Lolipop"
+    },
+    {
+      "id": 6,
+      "name": "ram Kumar",
+      "email": "ram@gmail.com",
+      "phone": "886547589",
+      "address": "raiganj",
+      "services": "Mutton"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

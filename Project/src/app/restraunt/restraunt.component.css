@@ -1,0 +1,19 @@
+.navbar{
+    background:rgba(250, 207, 126, 0.74);
+}
+
+.container-fluid h2{
+    margin: 16px;
+    color:crimson;
+    font-weight: 800;
+}
+.d{
+    background: rgb(41, 19, 235);
+    color:white;
+    text-align: center;
+}
+.e{
+    background: rgb(235, 19, 37);
+    color:white;
+    text-align: center;
+}

@@ -1,0 +1,102 @@
+<nav class="navbar">
+    <div class="container-fluid">
+        <h2>Restaurant Booking Record  </h2>
+        <div class="d-flex">
+            <button type="button"  (click)="clickAddResto()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add Customer Records</button>
+        </div>
+
+    </div>
+</nav>
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Restaurant Record Management </h1>
+        <p class="col-md-8 fs-4">Save all records for restaurant</p>
+        <a class="btn btn-primary btn-lg" target="-blank" type="button"
+            href="https://www.youtube.com/channel/UCRf6dfFdV9wU-gSB9fpHmcQ">Watch Video</a>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead class="e">
+        <tr>
+            <th scope="col">Restaurant ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Services</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody class="d">
+        <tr *ngFor="let data of allRestaurantData" >
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.services}}</td>
+            
+                                                         
+            <td>
+                <button (click)="OnEdit(data)"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>
+                <button (click)="deleteResto(data)" class="btn btn-danger mx-3">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Resturant Records Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup] = "formValue">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" formControlName="email" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter Your Email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Phone</label>
+                        <input type="text" formControlName="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Your Phone-No">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Address</label>
+                        <input type="text" formControlName="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Your Address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Services</label>
+                        <input type="text" formControlName="services" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Type of Service">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button"  id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button *ngIf="showAdd" type="button"  class="btn btn-primary" (click)= "addResto()">Add</button>
+                <button  *ngIf="showbtn" type="button" class="btn btn-primary" (click)= "UpdateResto()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="footer">
+        © Copyright :2025 All Right Reserved | www.pinaplerestro.com
+    </p>
+</footer>
